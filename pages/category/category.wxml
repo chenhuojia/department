@@ -1,0 +1,11 @@
+<!--pages/category/category.wxml-->
+<view class='container' >
+  <view class='cate-container'>
+    <block wx:for="{{cate}}" >
+      <view class='cate-item' bindtap='group' data-id="{{item.id}}">
+        <image mode='aspectFit' src='{{item.image}}'></image>
+        <view>{{item.name}}</view>
+      </view>
+    </block>
+  </view>
+</view>

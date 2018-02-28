@@ -1,0 +1,8 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  font-family: '微软雅黑';
+  font-size: 12px;
+  color: #666666;
+} 
+

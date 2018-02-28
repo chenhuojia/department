@@ -1,0 +1,85 @@
+/**index.wxss**/
+.header{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15rpx;
+  margin-right: 15rpx;
+}
+.left{
+  width: 70%;
+  display: flex;
+}
+
+.item-top{
+  display: flex;
+  margin-bottom: 5rpx;
+  margin-left: 40rpx;
+}
+.item-top view{
+  padding-right: 30rpx;
+}
+.item-foot{
+  display: flex;
+}
+.index-item{
+  margin-bottom: 15rpx;
+  position: relative;
+}
+.foot-image{
+  width: 35%;
+  padding-right: 15rpx;
+  height: 120px;
+ 
+}
+.foot-image image{
+  width: 100%;
+  height: 100%;
+}
+.foot-dec{
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  text-align: center;
+  line-height: 120px;
+}
+
+.img_item {
+  width: 47%;
+  margin: 1%;
+  display: inline-block;
+  vertical-align: top;
+  
+}
+
+.item-box{
+  border: 1rpx solid #eee;
+  border-radius:15rpx;
+  margin-bottom: 15rpx; 
+}
+.item-btn{
+  height: 50rpx;
+  display: flex;
+  justify-content: space-between; 
+}
+.item-btn-nul{
+  justify-content: flex-end; 
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  right: 10px; 
+}
+.item-btn image{
+  height: 33rpx;
+  width: 50rpx; 
+}
+.group{
+  display: flex; 
+}
+.change-show-type image{
+  height: 50rpx;
+  width: 50rpx; 
+}
+.change-show-type{
+  display: flex;
+  justify-content: flex-end;
+}

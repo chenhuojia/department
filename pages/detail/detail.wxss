@@ -1,0 +1,15 @@
+.detail-img{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.detail-img view{
+  width: 49%;
+  border: 1rpx #cbcbcb solid;
+  border-radius:15rpx; 
+  margin-right:1rpx; 
+  margin-bottom:15rpx;
+}
+.detail-img image{
+  width: 100%;
+}

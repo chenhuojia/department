@@ -1,0 +1,28 @@
+<template name="normal">
+ <scroll-view scroll-y="true" style="height:{{scrollH}}px" bindscrolltolower="lower">
+      <block wx:for="{{images}}">
+        <view class='index-item' bindtap='detail' data-id='{{item.id}}'>
+          <view class='item-top'>
+            <view>部门：{{item.name}}</view>
+            <view style='color:#1296db;'>{{item.time}}</view>
+          </view>
+          <view class='item-foot'>
+            <view class='foot-image'>
+              <image mode='aspectFit' src='{{item.pic}}'></image>
+            </view>
+            <view class='foot-dec'>{{item.dec}}</view>
+          </view>
+          <view class='item-btn item-btn-nul'>
+            <view class='group' bindtap='approve' data-id='{{item.id}}'>
+              <image mode='aspectFit' src='{{item.haveApprove==1?icon.likeAfter:icon.likeBefore}}' ></image>
+              <view>{{item.approve}}</view>
+            </view>
+            <view class='group' bindtap='moreDsicuss'>
+              <image mode='aspectFit' src='{{icon.discuss}}'></image>
+              <view>{{item.discuss}}</view>
+            </view>
+          </view>
+        </view>
+      </block>
+  </scroll-view>
+</template>

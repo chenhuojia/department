@@ -1,0 +1,55 @@
+<template name="falls">
+    <scroll-view scroll-y="true" style="height:{{scrollH}}px" bindscrolltolower="lower">
+      <view style="width:100%">
+        <view class="img_item">
+          <view wx:for="{{col1}}" wx:key="id">
+            <view class='item-box'>
+              <view class='item-rol' bindtap='detail' data-id='{{item.id}}'>
+                <image src="{{item.pic}}" style="width:100%;height:{{item.height}}px;border: 1rpx solid #eee;border-radius:15rpx;"></image>
+              </view>
+              <view class='item-btn'>
+                <view class='group'>
+                  <image mode='aspectFit' src='{{icon.group}}'></image>
+                  <view>{{item.name}}</view>
+                </view>
+                <view class='group' bindtap='approve' data-id='{{item.id}}'>                    
+                  <image mode='aspectFit' src='{{item.haveApprove==1?icon.likeAfter:icon.likeBefore}}' ></image>
+                  <view>{{item.approve}}</view>
+                </view>
+                <view class='group' bindtap='moreDsicuss'>                    
+                  <image mode='aspectFit' src='{{icon.discuss}}'></image>
+                  <view>{{item.discuss}}</view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="img_item">
+          <view wx:for="{{col2}}" wx:key="id">
+            <view class='item-box'>
+              <view class='item-rol' bindtap='detail' data-id='{{item.id}}'>
+                <image src="{{item.pic}}" style="width:100%;height:{{item.height}}px;border: 1rpx solid #eee;border-radius:15rpx;"></image>
+              </view>
+              <view class='item-btn'>
+                <view class='group'>
+                  <image mode='aspectFit' src='{{icon.group}}'></image>
+                  <view>{{item.name}}</view>
+                </view>
+                <view class='group' bindtap='approve' data-id='{{item.id}}'>
+                  
+                  <image mode='aspectFit' src='{{item.haveApprove==1?icon.likeAfter:icon.likeBefore}}' ></image>
+                  <view>{{item.approve}}</view>
+                </view>
+                <view class='group' bindtap='moreDsicuss'>
+                  
+                  <image mode='aspectFit' src='{{icon.discuss}}'></image>
+                  <view>{{item.discuss}}</view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+
+</template>

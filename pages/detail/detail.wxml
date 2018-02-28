@@ -1,0 +1,15 @@
+<view class='container'>
+  <view class='detail-header'>
+    <view class='title'>
+      {{itemData.title}}  <text>{{itemData.time}}</text>
+    </view>
+    <view class='desc'>
+      {{itemData.desc}}
+    </view>
+  </view>
+  <view class='detail-img' bindtap='viewImage'>
+    <view wx:for="{{itemData.imgs}}">
+      <image src='{{item}}' mode='aspectFit'></image>
+    </view>
+  </view>
+</view>

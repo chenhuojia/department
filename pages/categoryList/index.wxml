@@ -1,0 +1,24 @@
+<!--index.wxml-->
+<import src="../tpls/list/falls.wxml"/>
+<import src="../tpls/list/normal.wxml"/>
+<view class="container">
+    <view class='header'>
+      <view class='left'>
+       <!-- <input type='text' value='55511'></input>
+        <button type='default' size='mini'>oood</button>-->
+      </view>
+      <view class='change-show-type' bindtap='changeViewType' data-view='{{viewType}}'>      
+         <image mode='aspectFit' src='{{viewType==2?icon.list:icon.list2}}'></image>
+      </view>   
+    </view>
+
+    <view class='index-box' hidden="{{viewType==2}}">
+      <template is="normal" data="{{images: images,scrollH:scrollH,icon:icon}}"/>
+    </view>
+    <view hidden="{{viewType==1}}">
+      <view style="display:none">
+          <image wx:for="{{images}}" wx:key="id" id="{{item.imgId}}" src="{{item.pic}}" bindload="onImageLoad"></image>
+    </view>
+      <template is="falls" data="{{col1:col1,col2:col2,scrollH:scrollH,icon:icon}}"/>
+    </view>
+</view>
