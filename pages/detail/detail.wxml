@@ -1,15 +1,44 @@
-<view class='container'>
-  <view class='detail-header'>
-    <view class='title'>
-      {{itemData.title}}  <text>{{itemData.time}}</text>
+<scroll-view scroll-y="true" scroll-top="{{scrollTop}}" style="position:absolute; top:0; left:0; right:0; bottom:0;">
+  <view class='container dcontainer'>
+    <view class='detail-header'>
+      <view class='title'>
+        <view>{{itemData.title}}</view>
+        <view class='lead'>
+            <view>name：{{itemData.lead.name}}</view>
+            <view>wechat:{{itemData.lead.wechat}}</view>
+            <view>phone:{{itemData.lead.phone}}</view>
+            <view class='wxscan'>
+                <view><image mode="aspectFit" src='{{itemData.lead.wxscan}}'></image></view>
+            </view>
+        </view>
+        <view>
+          <view>{{itemData.time}}</view>
+          <view class='group' bindtap='approve' data-id='{{itemData.id}}'>                 
+            <image mode='aspectFit' src='{{itemData.haveApprove==1?icon.likeAfter:icon.likeBefore}}' ></image>
+            <view>{{itemData.approve}}</view>
+          </view>
+        </view>
+      </view>
+      <view class='desc'>
+        {{itemData.desc}}
+      </view>
     </view>
-    <view class='desc'>
-      {{itemData.desc}}
+    <view class='detail-img' bindtap='viewImage'>
+      <view wx:for="{{itemData.imgs}}">
+        <image src='{{item}}' mode='aspectFit'></image>
+      </view>
+    </view>
+    <view class='footer'>
+      长按图片即可保存
     </view>
   </view>
-  <view class='detail-img' bindtap='viewImage'>
-    <view wx:for="{{itemData.imgs}}">
-      <image src='{{item}}' mode='aspectFit'></image>
-    </view>
+</scroll-view>
+
+<view class='gotop'>
+  <view bindtap='goIndex'>
+    <image mode='aspectFit' src='../../images/icon/index.png'></image>
+  </view>
+  <view bindtap='goTop'>
+    <image mode='aspectFit' src='../../images/icon/top.svg'></image>
   </view>
 </view>

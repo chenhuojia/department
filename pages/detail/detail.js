@@ -4,7 +4,12 @@ var detail=new Detail();
 Page({
 
   data: {
+    scrollTop:0,
     id:-1,
+    icon: {
+      'likeBefore': '../../images/icon/like-before.svg',
+      'likeAfter': '../../images/icon/like-after.svg',
+    }
   },
 
   onLoad: function (option) {
@@ -27,5 +32,15 @@ Page({
       current: '', // 当前显示图片的http链接
       urls: this.data.itemData.imgs // 需要预览的图片http链接列表
     })
-  }
+  },
+  goTop: function (e) {
+    this.setData({
+      scrollTop: 0
+    })
+  },
+  goIndex: function (e) {
+    wx.switchTab({
+      url: '/pages/index/index'
+    })
+  },
 })

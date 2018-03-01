@@ -1,8 +1,43 @@
+.dcontainer{
+  position: relative;
+}
+.detail-header{
+  padding-left:15rpx;
+  padding-bottom:25rpx;
+}
+.title{
+  font-size: 16px;
+}
+.title :nth-child(3){
+  display: flex;
+  color:  #1296db;
+  font-size: 12px;
+  padding-bottom: 15rpx;
+}
+.lead {
+  padding-bottom: 15rpx;
+}
+.lead .wxscan{
+  height: 100px;
+  widows: 100px;
+  display: flex;
+  justify-content: flex-start;
+}
+.wxscan view{
+  width: 35%;
+}
+.wxscan image{
+  width: 100%;
+  height: 100%;
+}
+
+.desc{
+  text-indent:1em;
+}
 .detail-img{
   display: flex;
   flex-wrap: wrap;
 }
-
 .detail-img view{
   width: 49%;
   border: 1rpx #cbcbcb solid;
@@ -12,4 +47,33 @@
 }
 .detail-img image{
   width: 100%;
+}
+
+.footer{
+  text-indent:2em;
+}
+.gotop{
+  position: fixed;
+  bottom: 20rpx;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  z-index: 100;
+}
+.gotop view{
+  height: 64rpx;
+  width: 64rpx;
+  padding-right:25rpx; 
+}
+.gotop image{
+  width: 100%;
+  height: 100%;
+}
+.group{
+  display: flex; 
+  margin-left: 15rpx;
+}
+.group image{
+  height: 33rpx;
+  width: 50rpx; 
 }

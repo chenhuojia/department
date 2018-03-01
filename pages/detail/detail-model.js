@@ -5,6 +5,8 @@ class Detail extends Base{
     title:'SB部门招新啦',
     desc:"jdkddsdsdjksdhkshks45s45sd1de4e1t1t",
     time:'2018-02-28 13:04:29',
+    haveApprove:0,
+    approve:2,
     imgs:[
       "../../images/6.png",
       "../../images/7.png",
